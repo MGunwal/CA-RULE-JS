@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+label {
+	padding-right:10px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="ca_pattern.js"></script>
+<script src="cellular_automata.js"></script>
+</head>
+<body>
+	<div class="container clearfix"><h1>Cellular Automata</h1></div>
+	<div id="main" class="container clearfix" >
+		<div id="config">
+			<div>
+				<label data-toggle="tooltip" title="Rule Set">Rule</label>
+				<input id="rule" name="rule" type="text" value="30" style="align:right">
+			</div>
+			<div>
+				<label data-toggle="tooltip" title="Size of linear array of cells">Number of cells in a row</label>
+				<input id="cellsCount" name="cellsCount" type="text" value="500" style="align:right">
+			</div>
+			<div>
+				<button type="button" id="startBtn" class="btn btn-primary" onclick=startProcess()>Start</button>
+				<button type="button" id="stopBtn" class="btn btn-primary" onclick=stop()>Stop</button>
+			</div>
+		</div>
+		<div>
+			<p>
+			<canvas id="ca" width="600" height="512"></canvas>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
